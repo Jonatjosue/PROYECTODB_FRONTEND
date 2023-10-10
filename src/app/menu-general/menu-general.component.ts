@@ -1,4 +1,6 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-menu-general',
