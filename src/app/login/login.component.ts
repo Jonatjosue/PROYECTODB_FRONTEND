@@ -7,9 +7,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+ usuario:any = {};
+
+
+ mostrarFormularioRegistro = false;
+ mostrarlogin = true;
+
   constructor() { }
 
+
   ngOnInit(): void {
+  }
+
+  inicarSesion(){
+
+    location.href = "clientemenu";
+  }
+
+
+  registrarUsuario(){
+
+
+    location.href = "login";
+
+  }
+
+
+  alternarFormulario() {
+    this.mostrarFormularioRegistro = !this.mostrarFormularioRegistro;
+    this.mostrarlogin = !this.mostrarlogin;
   }
 
 }

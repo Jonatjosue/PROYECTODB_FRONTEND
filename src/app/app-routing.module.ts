@@ -13,32 +13,15 @@ import { VentasComponent } from './ventas/ventas.component';
 
 
 const routes: Routes = [
-{
- path:"/administracion_empleados", component:AdministracionEmpleadosComponent
-},
-{
-  path:"/administracion_producto", component:AdministracionProductoComponent
- },
- {
-  path:"/cliente_compra", component:ClienteCompraComponent
- },
- {
-  path:"/cliente_menu", component:ClienteMenuComponent
- },
- {
-  path:"/login", component:LoginComponent
- },
- {
-  path:"/menu_administrador", component:MenuAdministradorComponent
- },
- { path: '/',component: MenuGeneralComponent},
- {
-  path:"/proveedores", component:ProveedoresComponent
- },
- {
-  path:"/ventas", component:VentasComponent
- }
-
+{ path:"administracionempleados", component: AdministracionEmpleadosComponent },
+{ path:"administracionproducto", component:AdministracionProductoComponent },
+{ path:"clientecompra", component:ClienteCompraComponent },
+{ path:"clientemenu", component:ClienteMenuComponent},
+{ path:"login", component:LoginComponent },
+{ path:"menuadministrador", component:MenuAdministradorComponent},
+{ path: '',component: MenuGeneralComponent},
+{ path:"proveedores", component:ProveedoresComponent },
+{ path:"ventas", component:VentasComponent }
 ];
 
 @NgModule({

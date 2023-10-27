@@ -1,1 +1,66 @@
-<p>login works!</p>
+<!-- Contenido Principal -->
+<div *ngIf="mostrarlogin" >
+<div  id="loginForm"  class="container my-5 text-center">
+  <h1>Taller el Chapito</h1>
+  <img src="https://via.placeholder.com/300" alt="Taller el Chapito" class="img-fluid my-4">
+
+  <!-- Formulario de Inicio de Sesión -->
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <form (ngSubmit)="inicarSesion()" id="formAdministrador" class="Center">
+        <input type="text" [(ngModel)]="usuario.usuario" [ngModelOptions]="{standalone:true}"
+          placeholder="Usuario" required class="form-control">
+        <br><br>
+        <input type="password" [(ngModel)]="usuario.password" [ngModelOptions]="{standalone:true}"
+          placeholder="Password" required class="form-control">
+        <br><br>
+        <button type="submit" class="btn btn-success">Ingresar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Mensaje para Registro -->
+ <!-- Mensaje para Registro -->
+ <div class="mt-3">
+  ¿Aún no estás registrado? <a class="btn btn-link" (click)="alternarFormulario()">Regístrate aquí</a>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Formulario de Registro -->
+<section *ngIf="mostrarFormularioRegistro" >
+
+  <div class=" mt-4">
+    <a class="btn btn-outline-warning" (click)="alternarFormulario()">Regresar</a>
+  </div>
+<div id="registroForm" class="row justify-content-center mt-4 " >
+  <div class="col-md-4 ">
+    <form (ngSubmit)="registrarUsuario()" id="formRegistro" class="Center">
+      <input type="text" [(ngModel)]="usuario.nombres" [ngModelOptions]="{standalone:true}"
+        placeholder="Nombres " class="form-control">
+      <br><br>
+      <input type="text" [(ngModel)]="usuario.apellidos" [ngModelOptions]="{standalone:true}"
+        placeholder="Apellidos " class="form-control">
+      <br><br>
+      <input type="date" [(ngModel)]="usuario.fechaNacimiento" [ngModelOptions]="{standalone:true}"
+        placeholder="Fecha de Nacimiento" class="form-control" required>
+      <br><br>
+      <input type="text" [(ngModel)]="usuario.numeroTelefono" [ngModelOptions]="{standalone:true}"
+        placeholder="Número de Teléfono" class="form-control" required>
+      <br><br>
+      <input type="email" [(ngModel)]="usuario.correoElectronico" [ngModelOptions]="{standalone:true}"
+        placeholder="Correo Electrónico" class="form-control" required>
+      <br><br>
+      <button type="submit" class="btn btn-success">Registrarse</button>
+    </form>
+  </div>
+</div>
+</section>
+
+
+
+
+

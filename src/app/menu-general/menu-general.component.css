@@ -1,0 +1,8 @@
+.navbar-nav .nav-item .btn-primary:hover {
+  color: #000;
+}
+
+.navbar-nav .nav-item .btn-primary:hover:not(.disabled) {
+  background-color: #fff;
+  border-color: #000;
+}
