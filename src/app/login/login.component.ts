@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   inicarSesion(){
 
-    location.href = "clientemenu";
+    location.href = "administracionempleados";
   }
 
 

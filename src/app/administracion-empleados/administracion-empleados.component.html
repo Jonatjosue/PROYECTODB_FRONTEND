@@ -1,1 +1,46 @@
-<p>administracion-empleados works!</p>
+<div class="margin">
+  <h2>Dashboard de Empleados</h2>
+  <div class=" mt-4">
+    <a class="btn btn-outline-warning" (click)="alternarFormulario()">Regresar</a>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Número de Teléfono</th>
+        <th>Correo Electrónico</th>
+        <th>NIT</th>
+        <th>Género</th>
+        <th>CUI</th>
+        <th>Puesto</th>
+        <th>Fecha de Inicio</th>
+        <th>Salario Base</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados , let turno of turnos">
+        <td>{{ turno.idEmpleado }}</td>
+        <td>{{ turno.persona.nombres }}</td>
+        <td>{{ turno.persona.apellidos }}</td>
+        <td>{{ turno.persona.fechaNacimiento }}</td>
+        <td>{{ turno.persona.numeroTelefono }}</td>
+        <td>{{ turno.persona.correoElectronico }}</td>
+        <td>{{ turno.persona.nit }}</td>
+        <td>{{ turno.persona.genero }}</td>
+        <td>{{ turno.persona.cui }}</td>
+        <td>{{ turno.puesto }}</td>
+        <td>{{ turno.fechaInicio }}</td>
+        <td>{{ turno.salarioBase }}</td>
+        <td>
+          <button (click)="modificarEmpleado(turno)">Modificar</button>
+          <button (click)="eliminarEmpleado(turno)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
